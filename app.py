@@ -1,12 +1,6 @@
-from flask import Flask, render_template, send_from_directory
-import os
+from flask import Flask, render_template
 
-app = Flask(__name__, template_folder="templates")
-
-# 🔥 Explicit static route (THIS FIXES IT)
-@app.route("/static/<path:filename>")
-def static(filename):
-    return send_from_directory("static", filename)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 
 @app.route("/")
 def home():
@@ -19,6 +13,3 @@ def about():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-
-if __name__ == "__main__":
-    app.run()
