@@ -1,0 +1,204 @@
+/* Basic Reset to remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; /* Solid white background as requested */
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll due to angled background */
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh; /* Occupy most of the screen height */
+    width: 100%;
+    position: relative;
+   
+    background-image: url("/static/images/img.jpg");
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+}   
+
+.orange-text {
+    color: #ff9933;
+}
+
+/* === Left Contact Panel (Dark Side) === */
+.contact-panel {
+    /* Use a very dark gray/black to match image */
+    background-color: #1a1a1a; 
+    color: #fff;
+    width: 30%; /* Takes up slightly less than half */
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    padding-left: 8%; /* Spacing from left edge */
+    z-index: 1; /* Ensure it stays below the form card */
+}
+
+/* The angled shape technique */
+.contact-panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -120px; /* Push it out to the right */
+    width: 250px; /* Wide enough to cover the gap */
+    height: 100%;
+    background-color: #1a1a1a;
+    transform: skewX(-10deg); /* Creates the angled edge */
+    z-index: -1; /* Sits behind the text content */
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+}
+
+.header-small {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.dash {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: #666;
+    margin: 0 10px;
+}
+
+.contact-content h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+/* Contact Info Items */
+.info-list {
+    margin-bottom: 60px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.icon-orange {
+    color: #ff9933;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 5px; /* Align with the first line of text */
+}
+
+.info-item h4 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.info-item p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #eee;
+}
+
+/* Social Media Icons at bottom left */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #ff9933;
+}
+
+/* === Right Form Panel (White Side) === */
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .contact-panel {
+        width: 100%;
+        padding: 40px 20px;
+        /* Remove the angled effect on mobile for cleaner look */
+        background-color: #1a1a1a;
+    }
+    .contact-panel::after {
+        display: none;
+    }
+
+    .contact-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .form-panel {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .form-card {
+        padding: 30px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+}
+#home{
+  width: 50px;
+  height: 50px;
+  
+  position: absolute;
+  top: 0%;
+  right: 3%;
+  padding: 40px;
+  z-index: 999;
+}
+#home i{
+    font-size: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.582);
+}
+#home i{
+transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(255, 159, 47, 0.6);
+}
+.orange-link {
+    color: #F5A623;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
