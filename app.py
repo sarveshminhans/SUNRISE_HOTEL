@@ -16,4 +16,10 @@ def contact():
 
 # DO NOT REMOVE THIS
 if __name__ == "__main__":
-    app.run()
+    app = Flask(
+    __name__,
+    static_folder="static",
+    template_folder="templates"
+)
+
+
