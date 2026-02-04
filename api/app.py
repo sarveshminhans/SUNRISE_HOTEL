@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder="templates")
+# Point Flask to the correct folders relative to this file
+app = Flask(__name__, template_folder="../templates", static_folder="../static")
 
 @app.route("/")
 def home():
@@ -13,3 +14,8 @@ def about():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+# Keep this for local testing
+if __name__ == "__main__":
+    app.run()
+    
