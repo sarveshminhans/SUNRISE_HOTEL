@@ -14,5 +14,6 @@ def about():
 def contact():
     return render_template("contact.html")
 
+# DO NOT REMOVE THIS
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
