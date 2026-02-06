@@ -19,7 +19,7 @@ body {
     width: 100%;
     position: relative;
    
-    background-image: url("/static/images/img.jpg");
+    background-image: url("../assets/img.jpg");
     background-size: cover;
     background-position: center 45%;
     background-repeat: no-repeat;
@@ -201,4 +201,5 @@ transform: translateY(-4px) scale(1.03);
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
+
 }
