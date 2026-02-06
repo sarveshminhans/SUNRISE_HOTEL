@@ -186,7 +186,7 @@ h1 {
     width: 60%;
     position: relative;
     /* REPLACE WITH YOUR ACTUAL IMAGE URL */
-    background-image: url("./assets/img1.jpg"); 
+    background-image: url("../assets/img1.jpg"); 
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -330,4 +330,5 @@ transform: translateY(-4px) scale(1.03);
     font-weight: 600;
     font-size: 14px;
 }
+
 
