@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNRISE Hostel - Contact Us</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="contact-panel">
+        <div class="contact-content">
+
+            <div class="header-small">
+                <span class="orange-text">SUNRISE</span>
+                <span class="dash"></span>
+                HOTEL
+            </div>
+
+            <h1>
+                CONTACT <br>
+                <span class="orange-text">US</span>
+            </h1>
+
+            <div class="info-list">
+
+                <div class="info-item">
+                    <i class="fas fa-phone-alt icon-orange"></i>
+                    <div>
+                        <h4>BOOK NOW</h4>
+                        <p>09120129091</p>
+                        <!-- <p>+1 (555) 123-4568 (General)</p> -->
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt icon-orange"></i>
+                    <div>
+                        <h4>LOCATION</h4>
+                        <p>Mahokhar Baypass Churaha, Baberu Road</p>
+                        <p>Banda, Uttar Pradesh 210001</p>
+                    </div>
+                </div>
+
+                <!-- <div class="info-item">
+                    <i class="fas fa-envelope icon-orange"></i>
+                    <div>
+                        <h4>HOSTEL WARDEN</h4>
+                        <p>warden.north@smarthostel.edu</p>
+                        <p>warden.south@smarthostel.edu</p>
+                    </div>
+                </div> -->
+
+                
+
+            </div>
+
+            <!-- <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div> -->
+
+        </div>
+    </div>
+
+    
+
+</div>
+
+<div id="home">
+    <a href="{{ url_for('home') }}" class="orange-link">
+        <i class="ri-home-4-fill"></i>
+    </a>
+</div>
+
+</body>
+</html>
